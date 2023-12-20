@@ -1,0 +1,56 @@
+useRef
+    do:-
+        -when we need to manipulate dom we can use useRef with html attribute ref.
+        -when need to have previous value of current state.
+        -when we need do count render of window in useEffect without infinity loops.
+
+    don`t:-
+        -do not use useRef when state manipulation need.
+
+useMemo 
+    DO :-
+    -when we have big calculation in component but we dont need to calculate every time if calculation not change.
+    -when we dont need to make multiple refrence of object without changes
+
+useContext
+    do :-
+    -if we dont need to props drilling then we useContext
+    -if multiple component need props as global props we use useContext
+
+    -- first we need to make React.creatContext() its constructor get null 
+    -- then we need to wrap component with Context.provider and giv props as value={}if multiple then value={{}}
+    -- then which component need that props there we use useContext hook.
+
+react-router-dom
+
+    -tags --> <BrowserRouter> , <Routes> , <Route> , <Outlet> , <Switch> , <Link> , <NavLink> , <Navigate>
+    -hooks --> useNavigate() , useOutletContext() , 
+    - <Link> --> replace , to , state
+    - <Route> --> path , element , index
+
+
+Redux
+
+    -Three Principals => 
+    (1) Store   :- That Contain all state in 1 object
+    (2) Action  :- That contain all Action so we can`t chage state directly
+    (3) Reducer :- That Contain Fuction that will have action and store to manage states
+
+    For Example :- 
+        -- let say we have Cake Shop , ShopKeeper , Customer
+        - Shop work as Store that contain all Cakes(States)
+        - Customer need to buy so Buying is our Action for State.
+        - ShopKeeper will give cake from store to customer Like Reducer
+        - So shopkeeper will take cake minus from store and give to customer
+
+
+
+
+
+
+
+
+
+
+
+        
